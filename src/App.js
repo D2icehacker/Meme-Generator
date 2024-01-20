@@ -1,23 +1,19 @@
-import React from "react"
+import React, { Component } from "react"
 import Navbar from "./component/Navbar"
 import Hero from "./component/Hero"
 import Card from "./component/Card"
 import data from "./data"
+import Footer from "./component/Footer"
+
 
 export default function App() {
 
   const cards = data.map(item => {
     return (
       <Card
-      key={item.id}
-      img={item.coverImg}
-      rating={item.stats.rating}
-      reviewCount={item.stats.reviewCount}
-      location={item.location}
-      title={item.title}
-      price={item.price}
-      openSpots={item.openSpots}
-  />
+        key={item.id}
+        {...item}
+      />
     )
   })
 
@@ -28,6 +24,7 @@ export default function App() {
       <section className="cards-list">
         {cards}
       </section>
+      <Footer />
     </div>
   )
 }

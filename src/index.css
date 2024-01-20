@@ -101,3 +101,11 @@ section {
   font-weight: bold;
   /* display: none; */
 }
+
+.footer {
+  flex-direction: column;
+  height: 5px;
+  display: flex;
+  padding: 20px;
+ 
+}

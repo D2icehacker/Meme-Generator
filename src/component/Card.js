@@ -7,18 +7,24 @@ export default function Card(props) {
     } else if (props.location === "Online") {
         badgeText = "ONLINE"
     }
-    return (
+
+     return (
         <div className="card">
-            {badgeText && <div className="card--badge">{badgeText}</div>}
-            <img src={props.img} className="card--image" alt="Main Card Image." />
+            {
+                badgeText && 
+                <div className="card--badge">{badgeText}</div>
+            }
+            <img src={props.coverImg} className="card--image" alt="Main Card Image." />
             <div className="card--stats">
-                <img src={star} className="card--star" alt="Star Icon." />
-                <span>{props.rating}</span>
-                <span className="gray">({props.reviewCount}) • </span>
+            <img src={star} className="card--star" alt="Star Icon." />
+               <span>{props.stats.rating}</span>
+                <span className="gray">({props.stats.reviewCount}) • </span>
                 <span className="gray">{props.location}</span>
             </div>
             <p className="card--title">{props.title}</p>
-            <p className="card--price"><span className="bold">From ${props.price}</span> / person</p>
+            <p className="card--price">
+                <span className="bold">From ${props.price}</span> / person
+            </p>
         </div>
     )
 }
