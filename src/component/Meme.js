@@ -5,7 +5,7 @@ export default function Meme() {
         <main>
             <form className="form">
             <div>
-                    <label className="form--label">Top text</label>
+                    {/* <label className="form--label">Top text</label> */}
                     <input
                         type="text"
                         placeholder="Shut up"
@@ -13,7 +13,7 @@ export default function Meme() {
                     />
                 </div>
                 <div>
-                    <label className="form--label">Bottom text</label>
+                    {/* <label className="form--label">Bottom text</label> */}
                     <input
                         type="text"
                         placeholder="and take my money"
