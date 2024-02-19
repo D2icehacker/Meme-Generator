@@ -1,5 +1,4 @@
 import React from "react"
-import Images from "../images/troll-face.png"
 
 
 export default function Footer() {
